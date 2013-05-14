@@ -1,0 +1,8 @@
+*.swo
+*.swp
+*.swl
+*.swm
+*.swn
+coverage
+
+*.gem

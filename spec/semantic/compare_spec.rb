@@ -3,13 +3,9 @@ require File.dirname(__FILE__) + '/../spec_helper'
 module Semantic
   describe Compare do
 
-    def vector(values)
-      Linalg::DMatrix.columns([values])
-    end
-
     it "should calculate cosine" do
-      cosine =  Compare.cosine( vector([0.1,0.5]), vector([0.9, 0.3]) )
-      cosine.should be_close(0.4961, 0.0001)
+      cosine =  Compare.cosine(GSL::Matrix[[0.1],[0.5]].to_v, GSL::Matrix[[0.9],[0.3]].to_v)
+      cosine.should be_within(0.0001).of(0.4961)
     end
 
   end

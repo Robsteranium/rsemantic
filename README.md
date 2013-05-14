@@ -1,8 +1,6 @@
-= Rsemantic
+# Rsemantic
 
-* http://github.com/josephwilk/rsemantic
-
-== DESCRIPTION:
+[![Build Status](https://travis-ci.org/josephwilk/rsemantic.png?branch=master)](https://travis-ci.org/josephwilk/rsemantic)
 
 A Ruby document vector search with flexible matrix transforms. Current supported transforms: 
 
@@ -11,26 +9,27 @@ A Ruby document vector search with flexible matrix transforms. Current supported
 
 Documentation: http://github.com/josephwilk/rsemantic/wikis/home
 
-== REQUIREMENTS:
+## Requirements:
 
 * GSL - http://www.gnu.org/software/gsl
-* stemmer - http://rubyforge.org/projects/stemmer/
 
-== INSTALL:
+## INSTALL:
 
-* git clone git://github.com/josephwilk/rsemantic.git
-* brew install GSL
-* gem install GSL
+Rsemantic requires GSL. With homebrew try this:
 
-== Contributors
-* @josephwilk
+```
+brew install gsl
+```
+
+## Contributors
+* [@josephwilk](http://blog.josephwilk.net)
 * @dominikhonnef
 
-== LICENSE
+## LICENSE
 
 (The MIT License)
 
-Copyright (c) 2008 Joseph Wilk
+Copyright (c) 2008-2013 Joseph Wilk
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

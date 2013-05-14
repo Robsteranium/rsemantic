@@ -22,7 +22,7 @@ module Semantic
 
       def to_s
         out = StringIO.new
-        out.print " " * 9
+        out.print " " * 12
 
         matrix.size2.times do |id|
           out.print "  D#{id+1}  "
@@ -30,10 +30,12 @@ module Semantic
         out.puts
 
         matrix.to_a.each_with_index do |terms, index|
-          if Hash.method_defined?(:key)
-            out.print "#{@keywords.key(index).ljust(6)}" if @keywords.has_value?(index)
-          else 
-            out.print "#{@keywords.index(index).ljust(6)}" if @keywords.has_value?(index)
+
+          if @keywords.has_value?(index)
+            index_position = @keywords.values.index(index)
+            key = @keywords.keys[index_position]
+
+            out.print "#{key.ljust(10)}"
           end
           out.print "[ "
 
@@ -43,6 +45,7 @@ module Semantic
           out.print "]"
           out.puts
         end
+
         out.string
       end
 
